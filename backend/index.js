@@ -23,6 +23,7 @@ const messageSchema = new mongoose.Schema({
   date: { type: Date, default: Date.now }
 },{
     collection:'Messages',
+    versionKey: false,
 });
 
 const Message = mongoose.model('Message', messageSchema);
