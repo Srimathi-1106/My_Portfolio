@@ -1,0 +1,16 @@
+
+.navbar-toggler {
+    border: none; 
+}
+.navbar-toggler-icon {
+    background-image: none;
+    border:none; 
+}
+.navbar-toggler-icon::before {
+    content: '\2630'; 
+    color: rgb(220, 225, 220); 
+    font-size: 1.5rem;
+}
+.nav-link:hover{
+    border-bottom:1px solid white;
+}
