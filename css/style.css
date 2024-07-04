@@ -14,3 +14,6 @@
 .nav-link:hover{
     border-bottom:1px solid white;
 }
+.row{
+    margin-right:0 !important;
+}
