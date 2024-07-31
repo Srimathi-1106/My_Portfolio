@@ -9,13 +9,11 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
-// Connect to MongoDB Atlas
 const mongoUri = 'mongodb+srv://srimathi_1106:sri123@srimathip.zfeb5xf.mongodb.net/My_Portfolio?retryWrites=true&w=majority&appName=SrimathiP';
 mongoose.connect(mongoUri)
   .then(() => console.log('MongoDB connected...'))
   .catch(err => console.error(err));
 
-// Define a schema and model for messages
 const messageSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -28,7 +26,6 @@ const messageSchema = new mongoose.Schema({
 
 const Message = mongoose.model('Message', messageSchema);
 
-// // Endpoint to handle form submission
 app.post('/submit-message', (req, res) => {
   const { name, email, message, date } = req.body;
 
@@ -47,7 +44,6 @@ app.post('/submit-message', (req, res) => {
     });
 });
 
-// Example of a simple GET request endpoint
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
